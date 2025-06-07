@@ -621,7 +621,10 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 									</p>
 								</li>
 							</ol>
-						Next, follow the directions in <xref ref="md5-hash" /> but be sure to either stop or delete this codespace when you are doneby clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository.
+						Be sure to either stop or delete this codespace when you are doneby clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository. 
+						</p>
+						<p>
+						Next, jump down to follow the lab directions in <xref ref="md5-hash" />. 
 						</p>
 					</subsubsection>
 					
