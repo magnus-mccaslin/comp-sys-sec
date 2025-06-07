@@ -203,7 +203,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 				<section xml:id="hashes">
 					<title>Hashes</title>
 					<figure>
-                        <caption></caption>
+                        <caption>Hashing Algorithm</caption>
                         <image source="hash.svg" >
                             <shortdescription>Flowchart showing 'Plain Text' processed by a 'Hash Function' to produce 'Hashed Text'.</shortdescription>
                             <description>
@@ -253,7 +253,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 				<section xml:id="symmetric-encryption">
 					<title>Symmetric Encryption</title>
 					<figure>
-                        <caption></caption>
+                        <caption>Workflow of Symmetric Encryption</caption>
                         <image source="symmetric.svg" >
                             <shortdescription>Flowchart of symmetric encryption: Plaintext is encrypted with key 'A' to Ciphertext, then decrypted with the same key 'A' back to Plaintext.</shortdescription>
                             <description>
@@ -288,7 +288,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 				<section xml:id="asymmetric-encryption">
 					<title>Asymmetric Encryption</title>
 					<figure>
-                        <caption></caption>
+                        <caption>Workflow of Asymmetric Encryption</caption>
                         <image source="asymmetric.svg">
                             <shortdescription>Flowchart of asymmetric encryption: Plaintext is encrypted with a 'Public' key to Ciphertext, then decrypted with a 'Private' key back to Plaintext.</shortdescription>
                             <description>
@@ -330,7 +330,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 							<title>Electronic Codebook (ECB)</title>
 
 							<figure>
-                                <caption></caption>
+                                <caption>Electronic Codebook (ECB) Mode Encryption’</caption>
                                 <image source="ecb.svg">
                                     <shortdescription>Diagram showing Electronic Codebook (ECB) mode encryption where multiple plaintext blocks are independently encrypted with the same key.</shortdescription>
                                     <description>
@@ -351,7 +351,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 							<title>Cipher block chaining (CBC)</title>
 
 							<figure>
-                                <caption></caption>
+                                <caption>Diagram of Cipher Block Chaining</caption>
                                 <image source="cbc.svg">
                                     <shortdescription>Diagram of Cipher Block Chaining (CBC) mode of block cipher encryption.</shortdescription>
                                     <description>
@@ -361,7 +361,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
                                 </image>
                             </figure>
 							<p>
-								<url href="https://commons.wikimedia.org/wiki/File:CBC_encryption.svg">WhiteTimberwolf (SVG version)</url>, Public domain, via Wikimedia Commons
+								<url href="https://commons.wikimedia.org/wiki/File:CBC_encryption.svg">WhiteTimberwolf (SVG version)</url>, Public domain, via Wikimedia Commons.
 						
 							</p>
 							<p>
@@ -372,7 +372,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 						<subsubsection xml:id="counter-ctr-_counter_ctr">
 							<title>Counter (CTR)</title>
 							<figure>
-                                <caption></caption>
+                                <caption>Counter (CTR) Mode Encryption</caption>
                                 <image source="ctr.svg">
                                     <shortdescription>Diagram illustrating Counter (CTR) mode encryption with nonce and incrementing counter per block.</shortdescription>
                                     <description>
@@ -392,7 +392,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 						<subsubsection xml:id="galoiscounter-mode-gcm">
 							<title>Galois/Counter Mode (GCM)</title>
 							<figure>
-                                <caption></caption>
+                                <caption>Diagram of Galois/Counter Mode (GCM)</caption>
                                 <image source="gcm.svg" >
                                     <shortdescription>Diagram of Galois/Counter Mode (GCM) showing parallel encryption via CTR and authentication tag generation.</shortdescription>
                                     <description>
@@ -405,7 +405,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 							<p>
 								<url href="https://commons.wikimedia.org/w/index.php?curid=74845777">Gallois Counter Mode block diagram with initialization vector, adapted from a diagram by NIST
 								</url> is used under 
-								<url href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</url>
+								<url href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</url>.
 							</p>
 							<p>
 							GCM uses a counter like CTR, but does not make use of a nonce. Instead an IV is used with the inititial counter. GCM also generates a message authentication code (MAC) for each block to verify the integrity of the block. This combination makes for a modern, robust algorithm that is gaining rapid adoption.
@@ -460,7 +460,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 					<subsection xml:id="diffie-hellman-key-exchange">
 						<title>Diffie-Hellman Key Exchange</title>
 						<figure>
-                            <caption></caption>
+                            <caption>Diffie-Hellman Key Exchange</caption>
                             <image source="dh.svg">
                                 <shortdescription>Diagram illustrating Diffie-Hellman key exchange using the paint mixing analogy with Alice and Bob.</shortdescription>
                                 <description>
@@ -472,7 +472,7 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
                             </image>
                         </figure>
 						<p>
-							<url href="https://commons.wikimedia.org/wiki/File:Diffie-Hellman_Key_Exchange.svg">Original schema: A.J. Han Vinck, University of Duisburg-EssenSVG version: Flugaal</url>, Public domain, via Wikimedia Commons
+							<url href="https://commons.wikimedia.org/wiki/File:Diffie-Hellman_Key_Exchange.svg">Original schema: A.J. Han Vinck, University of Duisburg-EssenSVG version: Flugaal</url>, Public domain, via Wikimedia Commons.
 					
 						</p>
 						<p>
@@ -511,11 +511,11 @@ cleartext = (11**29)%91 = 72 (decrypted using N and d)
 					<subsection xml:id="blockchain">
 						<title>Blockchain</title>
 						<figure>
-							<caption></caption>
-							<image source="btc.svg" decorative="yes"/>
+							<caption>Bitcoin Logo</caption>
+							<image source="btc.svg" decorative="yes" width="50%"/>
 						</figure>
 						<p>
-							<url href="https://commons.wikimedia.org/wiki/File:Bitcoin_logo.svg">Bitboy</url>, Public domain, via Wikimedia Commons
+							<url href="https://commons.wikimedia.org/wiki/File:Bitcoin_logo.svg">Bitboy</url>, Public domain, via Wikimedia Commons.
 					
 						</p>
 						<p>
