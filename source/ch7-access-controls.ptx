@@ -407,7 +407,7 @@
 						<title>ACLs</title>
 
 						<p>
-						<idx>access controll lists</idx><term>Access Control Lists</term><idx>ACL</idx> <term>(ACL)</term> are used to permit or deny access based on a characteristic. They tend to be based on a simple characteristic and either deny access to anyone not on the list, 
+						<idx>access control lists</idx><term>Access Control Lists</term><idx>ACL</idx> <term>(ACL)</term> are used to permit or deny access based on a characteristic. They tend to be based on a simple characteristic and either deny access to anyone not on the list, 
 							<em>allowlist</em>, or deny access to anyone who 
 							<em>is</em> on the list, 
 							<em>denylist</em>.
@@ -610,7 +610,7 @@
 					<title>Lab: Linux File Permissions</title>
 
 					<p>
-					In this lab we are going to explore UNIX style file permissions and determine what they can do and why they are limited. Finally we will see how Linux ACLs provide more flexibility in assigning permissions.
+					In this lab we are going to explore UNIX-style file permissions and determine what they can do and why they are limited. Finally we will see how Linux ACLs provide more flexibility in assigning permissions.
 				</p>
 
 					<p>
@@ -643,7 +643,7 @@ root@11ce9e5ee80e:/# useradd carol
 root@11ce9e5ee80e:/# useradd dave</pre>
 
 					<p>
-					Traditional UNIX file permissions support user and group ownership of a file. Read, write, and execute permissions for a file can be set for the user, group, or others. You can view the permissions of a file with the 
+					Traditional UNIX-style file permissions support user and group ownership of a file. Read, write, and execute permissions for a file can be set for the user, group, or others. You can view the permissions of a file with the 
 						<c>ls -l</c> command. Let’s make home directories for Alice, Bob, and Carol and view the default permissions:
 				
 					</p>
@@ -693,20 +693,12 @@ $ ls bob
 $ ls carol
 $ exit</pre>
 
-					<table>
-						<title></title>
-						<tabular>
-							<row class="odd">
-								<cell halign="left">
-									<term>1</term>
-								</cell>
-								<cell halign="left">
-									<c>su</c> allows us to assume the role of anyone, often it is used to assume the role of the 
-									<em>superuser</em>
-								</cell>
-							</row>
-						</tabular>
-					</table>
+						<note>
+								<p>
+									(1) The <c>su</c> command allows us to assume the role of anyone, often it is used to assume the role of the
+									<em>superuser</em>.
+								</p>
+					</note>
 
 					<p>
 					The 
@@ -773,7 +765,9 @@ $ exit</pre>
 					</p>
 
 					<p>
-					The solution to this problem is to use Linux ACLs, which allow you to fine tune permissions. Two commands, 
+					The solution to this problem is to use Linux ACLs, which allow you to fine tune permissions,, allowing you to set specific access rights for individual users or groups beyond the traditional user, group, and other categories.
+					
+					Two commands, 
 						<c>setfacl</c> and 
 						<c>getfacl</c> are used to adjust Linux ACLs. As an example let’s add an http user, use the 
 						<c>setfacl</c> command to explicitly give the http user read and execute permissions to all three directories, list the new permissions, and list the new ACLs:
@@ -784,7 +778,7 @@ $ exit</pre>
 root@11ce9e5ee80e:/home# setfacl -m u:http:rx alice bob carol
 root@11ce9e5ee80e:/home# ls -l
 total 12
-drwxr-x---+ 2 alice alice 4096 Oct 28 01:28 alice (1)
+drwxr-x---+ 2 alice alice 4096 Oct 28 01:28 alice (2)
 drwxr-x---+ 2 bob   bob   4096 Oct 28 01:28 bob
 drwxr-x---+ 2 carol carol 4096 Oct 28 01:28 carol
 root@11ce9e5ee80e:/home# getfacl alice bob carol
@@ -815,22 +809,13 @@ group::---
 mask::r-x
 other::---</pre>
 
-					<table>
-						<title></title>
-						<tabular>
-							<row class="odd">
-								<cell halign="left">
-									<term>1</term>
-								</cell>
-								<cell halign="left">Notice the 
-									<c>+</c> sign indicating there are extra permissions
-								</cell>
-							</row>
-						</tabular>
-					</table>
+					<note>
+								<p>(2) In <c>drwxr-x---+ 2 alice alice 4096 Oct 28 01:28 alice</c> notice the <c>+</c> sign indicating there are extra permissions.
+								</p>
+					</note>
 					<question>
 					<p>
-					Take a screenshot showing that the http user has access to each directory.
+					Your instructor may want you to take a screenshot showing that the http user has access to each directory.
 				</p>
 			</question>
 
