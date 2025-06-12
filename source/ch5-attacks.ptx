@@ -676,7 +676,7 @@ $statement = "SELECT * FROM users WHERE name='" + $userName + "' AND password='"
 									</p>
 								</li>
 							</ol>
-						Be sure to either stop or delete this codespace when you are doneby clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository. 
+						Be sure to either stop or delete this codespace when you are done by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository. 
 						</p>
 						<p>
 						Next, jump down to follow the lab directions in <xref ref="MitM-continue" />. 

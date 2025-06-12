@@ -697,7 +697,7 @@
 
 					<introduction>
 					<p>The program <url href="https://nmap.org/book/">Nmap </url> (aka "Network Mapper") is a free and open source utility which can be used to scan IP addresses and ports in a network and perform security auditing of a network. Despite being created back in 1997, Nmap remains the preeminent tool for network managers. We will use it in today's lab.</p>
-					<p>For this lab, we need to use Docker, so you can again choose a Github Codespace or a local Docker installation. 
+					<p>For this lab, we again need to use Docker, so you can again choose a Github Codespace or a local Docker installation. 
 					</p>			
 				</introduction>
 				<subsection xml:id="nmap-codespace">
@@ -990,9 +990,7 @@ Nmap done: 1 IP address (1 host up) scanned in 28.39 seconds</pre>
 						<c>docker-compose down</c> to stop 
 						victim from running in the background.					</p>
 						<note>
-							
-
-										<p>
+						<p>
 							If you chose to use a Github codespace, don't forget to stop or delete the codespace by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository.
 						</p>
 						</note>
