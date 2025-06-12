@@ -860,7 +860,7 @@ root@7b6d733cc03a:/</pre>
 							Then, use the <c>nmap</c> command to scan the network.
 						Type <c>nmap -sP &lt;IP address&gt;</c> where &lt;IP address&gt; is the IP address you found above, followed by <c>/24</c> to scan the network.
 					</p>
-					<p> Your should see something like the following:</p>
+					<p> You should see something like the following:</p>
 					<pre>root@7b6d733cc03a:/# nmap -sP 172.20.0.0/24
 Starting Nmap 7.70 ( https://nmap.org ) at 2021-09-22 20:25 UTC
 Nmap scan report for 172.20.0.1
