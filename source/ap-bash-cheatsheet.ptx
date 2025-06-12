@@ -480,9 +480,28 @@ The <term>touch</term> command is commonly used for file creation. Its intended 
 </paragraphs>
 
 <paragraphs>
-<title>Programs Used in this Text</title>
+<title>Key Security Programs Used in this Text</title>
      <p>
         <dl width="narrow" >
+            <li>
+              <title><c>john</c></title>
+              <p>
+               <idx>john the ripper</idx><term>John the Ripper</term> is a password cracking tool that tests password strength by attempting to crack encrypted passwords using word lists and brute force methods.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                  e.g. <c>john --wordlist=password.lst /etc/shadow</c> attempts to crack passwords using the wordlist called <c>password.lst</c> against the standard shadow password file.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>john --show /etc/shadow</c> displays previously cracked passwords.
+                  </p>
+                </li>
+              </ul>
+            </li>
+
             <li>
               <title><c>md5sum</c></title>
               <p>
@@ -491,7 +510,50 @@ The <term>touch</term> command is commonly used for file creation. Its intended 
               <ul>
                 <li>
                   <p>
-                  e.g. <c>md5sum &lt;file-name&gt;</c> computes the MD5 hash of the specified file.
+                  e.g. <c>md5sum &lt;file-name&gt;</c> computes the MD5 hash of the specified <c>&lt;file-name&gt;</c> file.
+                  </p>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <title><c>nmap</c></title>
+              <p>
+               Network Mapper (Nmap) is a network discovery and security auditing tool used to scan networks and identify open ports, services, and operating systems.
+              </p>
+              <ul>
+                <li>
+                  <p>
+                  e.g. <c>nmap &lt;IP&gt;</c> scans <c>&lt;IP&gt;</c>for 1000 well-known ports which are used by popular services like SQL, SNTP, apache, and others.
+                  </p>
+                </li>
+                       <li>
+                  <p>
+                  e.g. <c>nmap -sP &lt;IP&gt;</c> performs a ping scan to discover live hosts on <c>&lt;IP&gt;</c>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>nmap -A &lt;IP&gt;</c> performs an aggressive scan with OS detection and version identification on <c>&lt;IP&gt;</c>.
+                  </p>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <title><c>scapy</c></title>
+              <p>
+               Scapy is an interactive packet manipulation program that allows users to create, send, and analyze network packets for security testing and analysis.  Scapy mainly does two things: sends packets and receives answers, matching requests with answers and returning a list of packet couples (request, answer) and a list of unmatched packets. To use it you need to install it using something like <c>pip install scapy</c>. The following are some examples of how to use it:
+              </p>
+              <ul>
+                <li>
+                  <p>
+                  e.g. <c>ping = Ether()/IP(dst="192.168.1.1")/ICMP()</c> creates an ICMP ping packet.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>srp1(packet)</c> sends a packet and receives one response at Layer 2.
                   </p>
                 </li>
               </ul>

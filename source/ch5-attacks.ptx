@@ -612,6 +612,7 @@ $statement = "SELECT * FROM users WHERE name='" + $userName + "' AND password='"
 						<url href="https://scapy.net/">scapy</url>, to disrupt an ongoing SSH session between victim and server, position ourself in the middle of the traffic, and capture the username and password victim is using.
 				
 					</p>
+
 					
 					<table>
 						<title>IP Addresses Used</title>
@@ -638,6 +639,10 @@ $statement = "SELECT * FROM users WHERE name='" + $userName + "' AND password='"
 					
 					<p>
 					For this lab our IP addresses are configured statically and are known to the attacker. It is also assumed that the attacker is on the local network. Lastly victim has been poorly configured to ignore changes to the host key. This is not entirely unreasonable as many users just ignore the warnings and clear out the known_hosts file when prompted anyway.
+				</p>
+				<p>
+					We will use scapy, a Python-based interactive packet manipulation program and library
+Scapy can forge or decode packets, send them on the wire, capture them, and match requests and replies. It can also handle tasks like scanning, tracerouting, probing, unit tests, attacks, and network discovery. 
 				</p>
 									</introduction>
 					<subsection xml:id="MitM-codespace">
@@ -687,6 +692,7 @@ $statement = "SELECT * FROM users WHERE name='" + $userName + "' AND password='"
 					</subsection>
 					<subsection xml:id="MitM-continue">
 						<title>Continue with the MitM with Scapy Lab</title>
+						
 						<p>
 						This lab will require us to use three terminal windows/tabs: one for the 
 						<c>docker-compose up</c> command which will show the output of everything running in the background, one for the victim which will show an SSH session with the server, and one for the attacker which we will use to make the attack.
