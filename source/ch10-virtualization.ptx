@@ -17,7 +17,7 @@
 
 						<figure xml:id="fig-vm">
 						<caption></caption>
-						<image source="vm.svg">
+						<image source="vm.svg" width="70%">
 							<shortdescription>Comparison of Virtual Machine deployment and Container deployment architectures.</shortdescription>
 							<description>
 							<p>The diagram presents a side-by-side comparison of two deployment models: "Virtual Machine Deployment" on the left and "Container Deployment" on the right. Both models start with "Actual Hardware (bare metal)" at the base.</p>

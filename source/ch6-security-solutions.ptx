@@ -49,7 +49,7 @@
 
 					<figure xml:id="fig-layers">
 					<caption></caption>
-					<image source="layers.svg">
+					<image source="layers.svg" width="80%">
 						<shortdescription>Diagram illustrating a conceptual layered security model with six distinct levels of defense.</shortdescription>
 						<description>
 						<p>The diagram displays a stacked representation of a layered security approach, commonly known as defense in depth. It consists of six horizontal rectangular blocks, each denoting a specific layer of security.</p>
@@ -326,7 +326,7 @@
 					<title>SIEM</title>
 					<figure xml:id="fig-seim">
 					<caption></caption>
-					<image source="seim.svg">
+					<image source="seim.svg" width="85%">
 						<shortdescription>Diagram illustrating a Security and Information Event Management (SIEM) system aggregating data from multiple security and network sources.</shortdescription>
 						<description>
 						<p>The diagram depicts a central rectangular component labeled "[S]ecurity and [I]nformation [E]vent [M]anagement," with the initial letters S, I, E, M bracketed to emphasize the acronym SIEM. This box represents the SIEM system.</p>

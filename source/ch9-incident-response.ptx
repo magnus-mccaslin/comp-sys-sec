@@ -18,7 +18,7 @@
 
 						<figure xml:id="fig-mitre">
 						<caption><url href="https://commons.wikimedia.org/wiki/File:Mitre_Corporation_logo.svg">The MITRE Corporation, Public domain, via Wikimedia Commons</url></caption>
-						<image source="mitre.svg">
+						<image source="mitre.svg" width="80%">
 							<shortdescription>The logo of The MITRE Corporation.</shortdescription>
 							<description>
 							<p>The image displays the logo of The MITRE Corporation. It features the word "MITRE" in all capital letters.</p>

@@ -222,7 +222,7 @@
 
 						<figure xml:id="fig-rfid">
 						<caption></caption>
-						<image source="rfid.svg">
+						<image source="rfid.svg" width="60%">
 							<shortdescription>Diagram illustrating the internal components of an RFID proximity card.</shortdescription>
 							<description>
 							<p>The diagram, titled "Proximity Cards," shows the internal structure of an RFID (Radio-Frequency Identification) proximity card. The outer boundary is indicated by a dashed rectangle labeled "Card Edge." Inside, a prominent feature is a large, spiraling coil of wire, explicitly labeled with an arrow as "Antenna"; this coil occupies most of the card's internal area. Connected to the inner termination of this antenna coil is a smaller rectangular block labeled "Capacitor and IC" (Integrated Circuit). The diagram illustrates how the antenna is a key component for receiving power and transmitting the card's ID when energizing by a reader's electromagnetic field.</p>
@@ -261,7 +261,7 @@
 
 						<figure>
 							<caption></caption>
-							<image source="cctv.jpg" decorative="yes"/>
+							<image source="cctv.jpg" width="40%" decorative="yes"/>
 						</figure> 
 
 						<p>
@@ -375,7 +375,7 @@
 
 						<figure xml:id="fig-permissions">
 						<caption></caption>
-						<image source="permissions.svg">
+						<image source="permissions.svg" width ="75%">
 							<shortdescription>Diagram illustrating Unix file permissions (read, write, execute).</shortdescription>
 							<description>
 							<p>The image would provide a visual explanation of the Unix file permission system. This includes a breakdown of the symbolic notation (e.g., `rwx` for read, write, and execute) and how these permissions apply to the three categories of users: owner, group, and others. It also illustrates the octal (numeric) representation of these permissions (e.g., 4 for read, 2 for write, 1 for execute) and how they combine to form a complete permission.</p>
