@@ -498,7 +498,7 @@ The <term>touch</term> command is commonly used for file creation. Its intended 
 </paragraphs>
 
 <paragraphs>
-<title>Key Security Programs Used in this Text</title>
+<title>Key Programs Used in this Text</title>
      <p>
         <dl width="narrow" >
             <li>
@@ -576,6 +576,62 @@ The <term>touch</term> command is commonly used for file creation. Its intended 
                 </li>
               </ul>
             </li>
+
+            <li>
+              <title><c>docker</c></title>
+              <p>
+               Docker is a platform for developing, shipping, and running applications in containers. It lets you package software with all its dependencies into a single unit called a container, which ensures the application runs reliably regardless of the environment. Containers can be thought of as being similar to virtual machines. Unlike virtual machines, though, containers run on the host kernal. Because of this, containers are more lightweight and less resource-intensive than virtual machines. 
+              </p>
+              <ul>
+                <li>
+                  <p>
+                  e.g. <c>docker run</c> runs containers.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker build</c> builds container images. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker images</c> shows all local images. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker ps</c> shows all currently running containers. Adding the <c>-a</c> flag shows images that are stopped as well.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker start &lt;container&gt;</c> and <c>docker stop &lt;container&gt;</c> start and stop containers. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker-compose up</c> starts multi-container applications.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker-compose run</c> runs commands in containers. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker-compose down</c> stops containers. 
+                  </p>
+                </li>
+                <li>
+                  <p>
+                  e.g. <c>docker help</c> lists available commands.
+                  </p>
+                </li>
+                
+              </ul>
+            </li>
+
 
         </dl>
     </p>

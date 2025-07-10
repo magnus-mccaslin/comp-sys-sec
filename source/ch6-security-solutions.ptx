@@ -528,7 +528,7 @@ log4j-target-1    | [Thread-0] INFO org.eclipse.jetty.server.Server - Started @9
 					</p>
 
 					<pre>PS C:\Users\rxt1077\it230\labs\log4j&gt; docker-compose run attacker bash
-root@3971c61303c8:/(1)</pre>
+root@3971c61303c8:/# (1)</pre>
 
 					<note>
 						<p>(1) Notice how the prompt changes once we are in the container.
@@ -554,7 +554,7 @@ root@3971c61303c8:/(1)</pre>
 
 					<note><p>(2) Your IP is 
 									<em>not</em>
-									<c>&lt;IP_ADDRESS&gt;</c> it is whatever you find in its place!
+									<c>&lt;IP_ADDRESS&gt;</c> it is whatever you find in its place! Note that the symbols need to be removed as well.
 					</p>
 					</note>
 
@@ -594,21 +594,22 @@ root@3971c61303c8:/(1)</pre>
 								</p>
 							</note>
 
-					<question>
-					<p>
-					What is the database password?
-				</p>
-			</question>
-			<question>
+					<exercise label = "fillin-database-password" xml:id="fillin-database-password"> <statement>
+<p>What's the database password? <var/></p></statement><setup><var>
+<condition string="YouGotMe"><feedback><p>Right! Sounds great, doesn't it?</p></feedback></condition>
+<condition string="^\s*default\s*$"><feedback><p>Incorrect. Copy and paste it from the terminal (capitalizatoin matters). Please try again.</p></feedback></condition></var></setup> </exercise>
+
+<question>
 					<p>
 					What steps would you take to mitigate the risk of a deployed application having this vulnerability?
 				</p>
 				</question>
-										<note>
-						<p>
-							If you chose to use a Github codespace, don't forget to stop or delete the codespace by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository.
-						</p>
-						</note>
+			
+			<note>
+			<p>
+				If you chose to use a Github codespace, don't forget to stop or delete the codespace by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository.
+			</p>
+			</note>
 			</subsection>
 				</section>
 				<section xml:id="security-solutions-review">
