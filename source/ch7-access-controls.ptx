@@ -735,7 +735,7 @@ drwxr-xr-x 2 carol carol 4096 Oct 28 01:28 carol</pre>
 					When a user is added to a UNIX system with the 
 						<c>useradd</c> command a group with their name is created. This allows us to pass a group to 
 						<c>chown</c> that only they will have access to. While this is a good start, others still have the ability to read and execute these directories, meaning 
-						<em>anyone</em> can view the contents. To prove this, lets assume the role of dave switching to the user dave by typing <c>su dave </c> and then do an 
+						<em>anyone</em> can view the contents. To prove this, lets assume the role of dave switching to the user dave by typing <c>sudo su dave </c> and then do an 
 						<c>ls</c> on each of the directories as follows:
 				
 					</p>
