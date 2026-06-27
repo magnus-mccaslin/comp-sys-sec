@@ -686,11 +686,11 @@ root@11ce9e5ee80e:/# sudo useradd dave
 
 					<p>
 					Traditional UNIX-style file permissions support user and group ownership of a file. Read, write, and execute permissions for a file can be set for the user, group, or others. You can view the permissions of a file with the 
-						<c>ls -l</c> command. Let’s make home directories for Alice, Bob, and Carol and view the default permissions. First run <c>cd home</c> and then create the directories with <c>mkdir alice bob carol</c>. Finally, run <c>ls -l</c> to view the permissions of the directories you just created.
+						<c>ls -l</c> command. Let’s make home directories for Alice, Bob, and Carol and view the default permissions. First run <c>cd /home</c> and then create the directories with <c>mkdir alice bob carol</c>. Finally, run <c>ls -l</c> to view the permissions of the directories you just created.
 				
 					</p>
 
-					<pre>root@11ce9e5ee80e:/# cd home
+					<pre>root@11ce9e5ee80e:/# cd /home
 root@11ce9e5ee80e:/home# sudo mkdir alice bob carol
 root@11ce9e5ee80e:/home# ls -l
 total 12

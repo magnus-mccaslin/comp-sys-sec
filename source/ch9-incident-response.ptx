@@ -530,7 +530,7 @@
 						<title>Command and Control</title>
 
 						<p>
-							<idx>Command and Control</idx>
+							<idx>command and control</idx>
 							<idx>C2</idx>
 							<idx>C&amp;C</idx>
 						<term>Command and Control</term> (<term>C2</term> or <term>C&amp;C</term>) refers to the process of setting up a channel between the compromised internal systems and an external system. This channel can be used to get data off the compromised machines and/or for putting malware on the machines. A C2 channel allows the operator to send interact with the compromised machines and even automate much of the work.
@@ -570,7 +570,7 @@
 					</p>
 					<question>
 					<p>
-					Come up with two different groups that should receive a disclosure from Sony as a result of the 2014 breach. Write a disclosure email for each of them, detailing what happened, what the response was, and what the effect of the party is. Be sure to keep your audience in mind when determining how much detail and what types of things should be discussed in the email.
+					Come up with two different groups that should receive a disclosure from Sony as a result of the 2014 breach. Write a disclosure email for each of them, detailing what happened, what the response was, and what the effect on the party is. Be sure to keep your audience in mind when determining how much detail and what types of things should be discussed in the email.
 				</p>
 				</question>
 				</section>

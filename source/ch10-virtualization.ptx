@@ -254,7 +254,7 @@ COPY index.php /var/www/html/index.php</pre>
 						Be sure to either stop or delete this codespace when you are done by clicking the "Stop" button or the "Delete" button in the Codespaces tab of your repository. 
 						</p>
 						<p>
-						Next, jump down to follow the lab directions in <xref ref="log4j-continue" />. 
+						Next, jump down to follow the lab directions in <xref ref="malicious-continue" />. 
 						</p>
 					</subsection>
 				<subsection xml:id="malicious-local">
