@@ -530,7 +530,7 @@
 						<title>Command and Control</title>
 
 						<p>
-							<idx>Command and Control</idx>
+							<idx>command and control</idx>
 							<idx>C2</idx>
 							<idx>C&amp;C</idx>
 						<term>Command and Control</term> (<term>C2</term> or <term>C&amp;C</term>) refers to the process of setting up a channel between the compromised internal systems and an external system. This channel can be used to get data off the compromised machines and/or for putting malware on the machines. A C2 channel allows the operator to send interact with the compromised machines and even automate much of the work.
